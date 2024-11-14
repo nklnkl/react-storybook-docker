@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  storybook:
+    build:
+      context: ./storybook
+      dockerfile: Dockerfile
+    ports:
+      - "6006:6006"
+    volumes:
+      - ./storybook:/storybook
+    environment:
+      - NODE_ENV=development
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/app
+    environment:
+      - NODE_ENV=development
