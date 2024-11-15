@@ -1,31 +1,25 @@
-# Dependencies
-node_modules/
-/.pnp
-.pnp.js
+# Root level environment files
+/.env
+/.env.*
+!/.env.example
 
-# Testing
-/coverage
+# Root level editor files
+/.idea/
+/.vscode/
+*.sublime-workspace
+*.sublime-project
 
-# Production
-/build
-/dist
-/storybook-static
+# Root level OS files
+.DS_Store
+Thumbs.db
 
-# Development
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Root level temporary files
+/.tmp/
+/.temp/
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Docker volumes and data
+/docker-data/
+/volumes/
 
-# Editor directories and files
-.idea/
-.vscode/
-*.swp
-*.swo
-.DS_Store 
+# Root level logs
+/*.log 
